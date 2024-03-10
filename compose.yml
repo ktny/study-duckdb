@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  db:
+    build: ./db
+    volumes:
+      - ./data:/opt/data
+      - duckdb_data:/opt
+
+volumes:
+  duckdb_data:
